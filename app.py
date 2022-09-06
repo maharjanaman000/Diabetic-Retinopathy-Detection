@@ -92,7 +92,7 @@ if choice == 'Login':
 					st.write(result)
 					st.pyplot(figure)
 			def predict_class(image):
-				classifier_model = tf.keras.models.load_model(r'/Users/nishabaruwal/Desktop/Aman Folder Final/saved_model/dr_detection.hdf5')
+				classifier_model = tf.keras.models.load_model(r'https://github.com/maharjanaman000/Diabetic-Retinopathy-Detection/tree/main/saved_model/dr_detection.hdf5')
 				shape = ((224,224,3))
 				model = tf.keras.Sequential([hub.KerasLayer(classifier_model, input_shape=shape)])
 				test_image = image.resize((224,224))
